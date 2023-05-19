@@ -1,0 +1,58 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{setspace}
+\usepackage[a4paper,top=2.8cm,bottom=2.8cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{lipsum}
+\usepackage[style=apa,backend=biber]{biblatex}
+\usepackage{sectsty}
+
+
+\title{Examining the Viability of Net-Negative Carbon Removal Techniques in Limiting Global Warming to 1.5 Degrees Celsius: An Economic and Environmental Evaluation}
+\author{Thimo Merke}
+\date{June 15, 2023}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makechapterhead}{50\p@}{0pt}{}{}
+\patchcmd{\@makeschapterhead}{50\p@}{0pt}{}{}
+\makeatother
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+\onehalfspacing
+\chapterfont{\fontsize{30}{15}\selectfont}
+\sectionfont{\fontsize{14}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\input{title.tex}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+\tableofcontents
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%\input{intro.tex}
+\input{background.tex}
+\input{biological.tex}
+\input{geochemical.tex}
+\input{chemical.tex}
+
+\printbibliography
+%\bibliography{references}
+\end{document}
