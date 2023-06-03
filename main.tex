@@ -9,6 +9,8 @@
 \usepackage{adjustbox}
 \usepackage{rotating, float, caption}
 \usepackage{enumitem}
+\usepackage{nomencl}
+\usepackage{placeins}
 
 \title{Examining the Viability of Net-Negative Carbon Removal Techniques in Limiting Global Warming to 1.5 Degrees Celsius: An Economic and Environmental Evaluation}
 \author{Thimo Merke}
@@ -38,16 +40,17 @@
 
 \input{title.tex}
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
+\input{abstract.tex}
 
 \tableofcontents
-
+%\thispagestyle{empty}
+\listoffigures
+\listoftables
 \newpage
-\thispagestyle{empty}
-\mbox{}
+
+\makenomenclature
+\input{acronyms.tex}
+\printnomenclature
 \newpage
 
 %\input{intro.tex}
@@ -61,5 +64,6 @@
 \input{appendix.tex}
 
 \printbibliography
-%\bibliography{references}
+
+\input{declaration}
 \end{document}
