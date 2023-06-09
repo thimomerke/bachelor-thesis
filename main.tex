@@ -38,6 +38,8 @@
 
 \begin{document}
 
+\renewcommand{\thepage}{\roman{page}}
+
 \input{title.tex}
 
 \input{abstract.tex}
@@ -53,6 +55,8 @@
 \printnomenclature
 \newpage
 
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}}
 %\input{intro.tex}
 \input{background.tex}
 \input{biological.tex}
